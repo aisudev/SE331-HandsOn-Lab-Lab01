@@ -5,7 +5,7 @@ const app = Vue.createApp({
             product_link: 'https://www.camt.cmu.ac.th',
             product_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aut cum delectus? Dignissimos culpa ex ipsum sapiente corrupti dolore consectetur, dolor eos incidunt nesciunt velit fuga quia repellat ab. Repudiandae!',
             inStock: true,
-            inventory: 11,
+            inventory: 5,
             onSale: true,
             details: ['50% cotton', '30% wool', '20% polyester'],
             variants: [
@@ -38,7 +38,7 @@ const app = Vue.createApp({
                 this.cart = this.inventory
                 return alert('no more product: '+ this.inventory)
             }
-            
+
             this.inventory -= this.cart
             this.inStock = this.inventory > 0
         }
