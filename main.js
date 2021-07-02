@@ -34,9 +34,11 @@ const app = Vue.createApp({
             this.image = variantImage
         },
         buyProduct(){
-            if(this.cart > this.inventory) 
+            if(this.cart > this.inventory) {
                 this.cart = this.inventory
                 return alert('no more product: '+ this.inventory)
+            }
+            
             this.inventory -= this.cart
             this.inStock = this.inventory > 0
         }
