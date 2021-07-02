@@ -35,9 +35,9 @@ const app = Vue.createApp({
         },
         buyProduct(){
             if(this.cart > this.inventory) 
+                this.cart = this.inventory
                 return alert('no more product: '+ this.inventory)
             this.inventory -= this.cart
-            this.cart = this.inventory
             this.inStock = this.inventory > 0
         }
     }
